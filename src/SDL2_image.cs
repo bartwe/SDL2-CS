@@ -1,7 +1,7 @@
 #region License
 /* SDL2# - C# Wrapper for SDL2
  *
- * Copyright (c) 2013-2020 Ethan Lee.
+ * Copyright (c) 2013-2021 Ethan Lee.
  *
  * This software is provided 'as-is', without any express or implied warranty.
  * In no event will the authors be held liable for any damages arising from
@@ -253,6 +253,16 @@ namespace SDL2
 			int freedst,
 			int quality
 		);
+
+		public static string IMG_GetError()
+		{
+			return SDL.SDL_GetError();
+		}
+
+		public static void IMG_SetError(string fmtAndArglist)
+		{
+			SDL.SDL_SetError(fmtAndArglist);
+		}
 
 		#region Animated Image Support
 
